@@ -35,3 +35,15 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+        vendor.set(JvmVendorSpec.ORACLE)
+    }
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    javaCompiler.set(javaToolchains.compilerFor {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    })
+}
