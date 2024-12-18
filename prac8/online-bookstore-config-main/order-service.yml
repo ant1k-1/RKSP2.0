@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+#  application:
+#    name: order-service
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      fail-fast: true
+#  config:
+#    import: "configserver:"
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+  instance:
+    non-secure-port: 8080
+    prefer-ip-address: true

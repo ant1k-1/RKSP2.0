@@ -1,0 +1,5 @@
+inventoryservice\controller\BookController.class
+inventoryservice\repository\BookRepository.class
+inventoryservice\service\BookService.class
+inventoryservice\entity\Book.class
+inventoryservice\InventoryServiceApplication.class

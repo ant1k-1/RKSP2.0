@@ -1,0 +1,7 @@
+userservice\entity\User.class
+userservice\service\UniqueStringGenerator.class
+userservice\controller\HomeController.class
+userservice\config\SecurityConfig.class
+userservice\service\UserService.class
+userservice\UserServiceApplication.class
+userservice\repository\UserRepository.class

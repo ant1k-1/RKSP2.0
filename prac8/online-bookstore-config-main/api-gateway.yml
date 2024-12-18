@@ -1,0 +1,55 @@
+# api-gateway/src/main/resources/application.yml
+server:
+  port: 8080
+
+spring:
+#  application:
+#    name: api-gateway
+#  config:
+#    import: "optional:configserver:"
+  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      fail-fast: true
+    gateway:
+      routes:
+        - id: inventory-service
+          uri: http://inventory-service.default.svc.cluster.local:8080
+          predicates:
+            - Path=/inventory-service/**
+          filters:
+            - RewritePath=/inventory-service/(?<path>.*), /${path}
+        - id: user-service
+          uri: http://user-service.default.svc.cluster.local:8080
+          predicates:
+            - Path=/user-service/**
+            - Path=/user/**          # Добавьте этот путь, если необходимо
+          filters:
+            - RewritePath=/user-service/(?<path>.*), /${path}
+        - id: oauth2-service
+          uri: http://user-service.default.svc.cluster.local:8080
+          predicates:
+            - Path=/oauth2/**
+        - id: oauth2-redirect
+          uri: http://user-service.default.svc.cluster.local:8080
+          predicates:
+            - Path=/login/oauth2/code/**
+        - id: order-service
+          uri: http://order-service.default.svc.cluster.local:8080
+          predicates:
+            - Path=/order-service/**
+          filters:
+            - RewritePath=/order-service/(?<path>.*), /${path}
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: DEBUG
+#    org.springframework.web: DEBUG

@@ -1,0 +1,7 @@
+orderservice\OrderServiceApplication.class
+orderservice\service\OrderService.class
+orderservice\client\InventoryClient.class
+orderservice\repository\OrderRepository.class
+orderservice\entity\Order.class
+orderservice\client\BookDto.class
+orderservice\controller\OrderController.class
