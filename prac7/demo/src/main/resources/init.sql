@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS booksr (
     author VARCHAR(255),
     isbn VARCHAR(255),
     publisher VARCHAR(255),
-    year INTEGER,
+    year INTEGER
 );

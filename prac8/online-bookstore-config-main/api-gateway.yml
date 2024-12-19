@@ -11,6 +11,7 @@ spring:
 #    config:
 #      uri: http://localhost:8888
 #      fail-fast: true
+#    Mokin Anton
     gateway:
       routes:
         - id: inventory-service
