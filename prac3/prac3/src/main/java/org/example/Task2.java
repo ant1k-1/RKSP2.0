@@ -6,6 +6,7 @@ import java.util.Random;
 
 class Task21 {
     public static void main(String[] args) {
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         Random random = new Random();
 
         // Создаем поток из 1000 случайных чисел от 0 до 1000 и преобразуем в поток квадратов
@@ -20,7 +21,7 @@ class Task21 {
 class Task22 {
     public static void main(String[] args) {
         Random random = new Random();
-
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         // Создаем два потока: один с буквами, другой с цифрами
         Observable<Character> lettersStream = Observable.range(0, 1000)
                 .map(i -> (char) ('A' + random.nextInt(26))); // Генерируем случайные буквы от A до Z
@@ -43,7 +44,7 @@ class Task22 {
 class Task23 {
     public static void main(String[] args) {
         Random random = new Random();
-
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         // Создаем поток из 10 случайных чисел
         Observable<Integer> numbersStream = Observable.range(0, 10)
                 .map(i -> {

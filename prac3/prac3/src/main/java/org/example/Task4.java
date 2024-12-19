@@ -86,6 +86,7 @@ class FileProcessor {
 // Основной класс системы обработки файлов
 class FileProcessingSystem {
     public static void main(String[] args) {
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         int queueCapacity = 5;
         FileQueue fileQueue = new FileQueue(queueCapacity);
         String[] supportedFileTypes = {"XML", "JSON", "XLS"};

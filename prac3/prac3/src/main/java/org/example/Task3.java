@@ -25,6 +25,7 @@ class UserFriend {
         );
     }
     public static void main(String[] args) {
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         // Создаем массив случайных userId
         Integer[] userIdArray = {1, 2, 3, 4, 5};
         // Создаем поток userId из массива

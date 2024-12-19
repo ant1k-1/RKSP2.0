@@ -91,6 +91,7 @@ class Alarm implements Observer<Integer> {
 }
 public class Task1 {
     public static void main(String[] args) {
+        System.out.println("######## Anton Mokin IKBO-20-21 ########");
         TemperatureSensor temperatureSensor = new TemperatureSensor(); //Создаем датчик температуры
         CO2Sensor co2Sensor = new CO2Sensor(); // Создаем датчик CO2
         Alarm alarm = new Alarm(); // Создаем сигнализацию

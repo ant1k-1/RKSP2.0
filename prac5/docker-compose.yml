@@ -13,16 +13,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  # frontend:
-  #   build:
-  #     context: ./frontend/front-prac5
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "3000:80"
-  #   volumes:
-  #     - ./frontend/front-prac5/:/usr/src/app
-  #     - ./frontend/front-prac5/node_modules:/usr/src/app/node_modules
-
   nginx:
     image: nginx:latest
     ports:
@@ -57,4 +47,3 @@ services:
 
 volumes:
   postgres_data:
-  node_modules:

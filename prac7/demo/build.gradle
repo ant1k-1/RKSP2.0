@@ -33,10 +33,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'io.projectreactor:reactor-core:3.5.8'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+    testImplementation 'io.projectreactor:reactor-test:3.5.10' // Укажите актуальную версию
 }
 
 tasks.named('test') {
-    outputs.dir snippetsDir
     useJUnitPlatform()
 }
 
